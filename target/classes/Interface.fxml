@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<SplitPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.InterfaceController" dividerPositions="0.5">
+    <items>
+        <!-- Left Pane: Input, Buttons, and Output -->
+        <AnchorPane>
+            <children>
+                <GridPane hgap="10" vgap="10">
+                    <padding>
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+                    </padding>
+
+                    <!-- Input Label and Field -->
+                    <Label text="Enter Text:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextArea fx:id="inputText" prefRowCount="3" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+                    <!-- Buttons Row -->
+                    <HBox spacing="10" alignment="CENTER" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                        <children>
+                            <Button text="Encrypt" onAction="#encryptText"/>
+                            <Button text="Decrypt" onAction="#decryptText"/>
+                            <Button text="Copy Result" onAction="#copyResult"/>
+                        </children>
+                    </HBox>
+
+                    <!-- Result Label and Field -->
+                    <Label text="Result:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <TextArea fx:id="outputText" editable="false" prefRowCount="3" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                </GridPane>
+            </children>
+        </AnchorPane>
+
+        <!-- Right Pane: Authenticator and Function Explanation -->
+        <AnchorPane>
+            <children>
+                <VBox spacing="20" alignment="TOP_LEFT">
+                    <padding>
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+                    </padding>
+
+                    <!-- Authenticator -->
+                    <Label text="Authenticator:" style="-fx-font-family: Arial; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="authenticatorText" editable="false" prefHeight="200" wrapText="true"/>
+
+                    <!-- Function explanation -->
+                    <Label text="Function Usage:" style="-fx-font-family: Arial; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <TextArea fx:id="functionText" editable="false" prefHeight="200" wrapText="true"/>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
