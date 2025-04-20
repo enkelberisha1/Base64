@@ -1,3 +1,5 @@
+package Controller;
+
 import Code.Base64Implementation;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
