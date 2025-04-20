@@ -16,6 +16,7 @@ This project, developed by second-year Computer Engineering students at FIEK, im
 ## Clone command:
 ```bash
 git clone https://github.com/enkelberisha1/Base64.git
+```
 ## Project Description
 
 This Java program provides a hands-on implementation of Base64 encoding and decoding. It converts binary data (`byte[]`) to a Base64 encoded string and vice-versa, adhering to the standard of dividing bits into 6-bit blocks and adding `=` padding when necessary.
