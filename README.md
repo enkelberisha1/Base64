@@ -10,17 +10,17 @@ This project, developed by second-year Computer Engineering students at FIEK, im
 
 * Enkel Berisha ([@EnkelBerisha](https://github.com/enkelberisha1))
 * Engji Osmani ([@EngjiOsmani](https://github.com/engjiosmani))
-* Enes Spahiu ([@EnesSpahiu](https://github.com/enesispahiu))
+* Enes Spahiu ([@EnesSpahiu](https://github.com/enesiktm1))
 * Enis Morina ([@EnisMorina](https://github.com/enismorina1))
 
 ## Clone command:
 ```bash
 git clone https://github.com/enkelberisha1/Base64.git
 ```
+
 ## Project Description
 
 This Java program provides a hands-on implementation of Base64 encoding and decoding. It converts binary data (`byte[]`) to a Base64 encoded string and vice-versa, adhering to the standard of dividing bits into 6-bit blocks and adding `=` padding when necessary.
-
 
 The included JavaFX GUI empowers users to:
 
@@ -58,7 +58,6 @@ The included JavaFX GUI empowers users to:
 ### `Interface.fxml`
 
 * Defines the structure and layout of the graphical user interface using TextAreas for input and output, and Buttons for actions.
-
 * Presents a clean and intuitive visual interface for ease of use.
 
 ## How to Run the Program
@@ -105,16 +104,17 @@ Once the application is running, you will see the main window with the following
 
 ### Main interface after launching the application
 
-![main](https://github.com/user-attachments/assets/0ed893d6-ff6a-4abe-8d5c-a130deeacb46)
+![main](https://github.com/user-attachments/assets/92df2859-31f8-4191-ae34-cb2cdeebd042)
 
 
 ### Encoding process of a text to Base64
-![Encoding](https://github.com/user-attachments/assets/1de3bc30-e8be-4e68-93cd-b6e71d1ecff0)
+
+![Encoding](https://github.com/user-attachments/assets/116d5ef3-2e8f-4fff-80cb-3cf0512dd689)
 
 
 ### Decoding process of a Base64 string
 
-![Decoding](https://github.com/user-attachments/assets/cc0d4a94-f0f1-4a28-aed5-7a5fc5cbdbf0)
+![Decoding](https://github.com/user-attachments/assets/3f26ac9d-d641-418f-a1ac-f543c77c83f6)
 
 
 ## Conclusion
@@ -122,46 +122,3 @@ Once the application is running, you will see the main window with the following
 This project serves as a practical demonstration of how a fundamental encoding algorithm like Base64 can be implemented from scratch using basic programming operations. Furthermore, it showcases how a simple yet effective user interface (GUI) can be developed to manage and interact with such functionalities in an intuitive manner.
 
 **Important Note:** "Base64 is not encryption. It is simply an encoding scheme designed to ensure that binary data can be reliably transported as text."
-
-
-1.  **Input Field:** Enter the text you want to encode or the Base64 string you want to decode in the top text area.
-2.  **Encrypt Button:** Click this button to encode the text in the input field using the custom Base64 implementation. The result will be displayed in the "Custom Encoded" text area. The standard Java encoding will appear in the "Java Encoded" text area for comparison.
-3.  **Decrypt Button:** Click this button to decode the Base64 string in the input field using the custom Base64 implementation. The original text will be shown in the "Custom Decoded" text area. The standard Java decoding will appear in the "Java Decoded" text area for comparison.
-4.  **Comparison Areas:** These text areas display the results from both the custom implementation and Java's built-in functions, allowing for direct comparison.
-5.  **Copy Button:** Click the "Copy" button next to the desired result (custom encoded, Java encoded, custom decoded, Java decoded) to copy the text to your system's clipboard.
-
-## Usage Examples
-
-### Encoding Example
-
-**Input:** `"Man"`
-
-**Output:** `"TWFu"`
-
-### Decoding Example
-
-**Input Base64:** `"TQ=="`
-
-1.  Remove padding: `"TQ"`
-2.  `T` -> index = 19 -> `010011`
-3.  `Q` -> index = 16 -> `010000`
-4.  Combine bits: `010011010000` (12 bits)
-5.  Take the first 8 bits: `01001101` = 77 -> `'M'`
-
-## Screenshots
-
-### Main interface after launching the application
-
-![main](https://github.com/user-attachments/assets/0ed893d6-ff6a-4abe-8d5c-a130deeacb46)
-
-
-### Encoding process of a text to Base64
-![Encoding](https://github.com/user-attachments/assets/1de3bc30-e8be-4e68-93cd-b6e71d1ecff0)
-
-
-### Decoding process of a Base64 string
-
-![Decoding](https://github.com/user-attachments/assets/cc0d4a94-f0f1-4a28-aed5-7a5fc5cbdbf0)
-
-
-## Conclusion
