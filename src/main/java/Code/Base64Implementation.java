@@ -39,3 +39,26 @@ public class Base64Implementation {
 
         // Add padding
 
+        for (int i = 0; i < paddingCount; i++) {
+            result.append('=');
+        }
+
+        return result.toString();
+    }
+
+    // Fixed custom Base64 Decoding
+    public static byte[] customDecode(String encoded) {
+        if (encoded == null) {
+            throw new IllegalArgumentException("Input string cannot be null");
+        }
+
+        // Remove all whitespace and padding
+        String clean = encoded.replaceAll("\\s+", "").replaceAll("=+$", "");
+        int length = clean.length();
+
+        // Calculate output length
+        int outputLength = (length * 6) / 8;
+        byte[] result = new byte[outputLength];
+
+    }
+
