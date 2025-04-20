@@ -45,9 +45,33 @@ public class InterfaceController {
                 "- Uses 64-character alphabet (A-Z, a-z, 0-9, +, /)\n" +
                 "- Padding with '=' if needed");
     }
+ // Decrypt Button Handler
+    public void decryptText() {
+        String input = inputText.getText();
+        if (input.isEmpty()) {
+            outputText.setText("Please enter text to decrypt");
+            return;
+        }
 
-"- Handles padding characters ('=')\n" +
-        "- Validates input format");
+        try {
+            // Use both implementations
+            String customDecoded = new String(Base64Implementation.customDecode(input));
+            String javaDecoded = new String(java.util.Base64.getDecoder().decode(input));
+
+            // Set output to custom implementation
+            outputText.setText(customDecoded);
+
+            // Show comparison in authenticator
+            String authMessage = "Custom Base64 Decoding:\n" + customDecoded +
+                    "\n\nJava Built-in Base64 Decoding:\n" + javaDecoded +
+                    "\n\nResults match: " + customDecoded.equals(javaDecoded);
+            authenticatorText.setText(authMessage);
+
+            // Set function explanation
+            functionText.setText("Base64 Decoding Function:\n\n" +
+                    "- Converts Base64 encoded string back to original format\n" +
+                    "- Handles padding characters ('=')\n" +
+                    "- Validates input format");
         } catch (IllegalArgumentException e) {
         outputText.setText("Invalid Base64 input");
             authenticatorText.setText("Error in decoding:\n" + e.getMessage());
