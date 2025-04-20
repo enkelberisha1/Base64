@@ -59,6 +59,28 @@ public class Base64Implementation {
         // Calculate output length
         int outputLength = (length * 6) / 8;
         byte[] result = new byte[outputLength];
+        int buffer = 0;
+        int bitCount = 0;
+        int index = 0;
 
+        for (char c : clean.toCharArray()) {
+            int value = BASE64_CHARS.indexOf(c);
+            if (value == -1) {
+                throw new IllegalArgumentException(
+                        "Invalid Base64 character: '" + c + "'");
+            }
+
+            buffer = (buffer << 6) | value;
+            bitCount += 6;
+
+            if (bitCount >= 8) {
+                bitCount -= 8;
+                result[index++] = (byte) ((buffer >> bitCount) & 0xFF);
+            }
+        }
+
+        return result;
     }
+}
+    
 
