@@ -10,7 +10,7 @@ This project, developed by second-year Computer Engineering students at FIEK, im
 
 * Enkel Berisha ([@EnkelBerisha](https://github.com/enkelberisha1))
 * Engji Osmani ([@EngjiOsmani](https://github.com/engjiosmani))
-* Enes Spahiu ([@EnesSpahiu](https://github.com/enesiktm1))
+* Enes Spahiu ([@EnesSpahiu](https://github.com/enesiktm))
 * Enis Morina ([@EnisMorina](https://github.com/enismorina1))
 
 ## Clone command:
