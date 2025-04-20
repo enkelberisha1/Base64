@@ -21,6 +21,30 @@ public class InterfaceController {
     // Encrypt Button Handler
     public void encryptText() {
         String input = inputText.getText();
+        if (input.isEmpty()) {
+            outputText.setText("Please enter text to encrypt");
+            return;
+        }
+
+        // Use both implementations
+        String customEncoded = Base64Implementation.customEncode(input.getBytes());
+        String javaEncoded = java.util.Base64.getEncoder().encodeToString(input.getBytes());
+
+        // Set output to custom implementation
+        outputText.setText(customEncoded);
+
+        // Show comparison in authenticator
+        String authMessage = "Custom Base64 Encoding:\n" + customEncoded +
+                "\n\nJava Built-in Base64 Encoding:\n" + javaEncoded +
+                "\n\nResults match: " + customEncoded.equals(javaEncoded);
+        authenticatorText.setText(authMessage);
+
+        // Set function explanation
+        functionText.setText("Base64 Encoding Function:\n\n" +
+                "- Converts input string to Base64 encoded format\n" +
+                "- Uses 64-character alphabet (A-Z, a-z, 0-9, +, /)\n" +
+                "- Padding with '=' if needed");
+    }
 
 "- Handles padding characters ('=')\n" +
         "- Validates input format");

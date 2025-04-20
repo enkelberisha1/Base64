@@ -82,5 +82,5 @@ public class Base64Implementation {
         return result;
     }
 }
-    
+
 
