@@ -19,3 +19,23 @@ public class Base64Implementation {
 
         for (byte b : data) {
             // Shift existing bits left and add new byte
+            chunk = (chunk << 8) | (b & 0xFF);
+            bitCount += 8;
+
+            // When we have at least 6 bits, process them
+            while (bitCount >= 6) {
+                bitCount -= 6;
+                int index = (chunk >> bitCount) & 0x3F;
+                result.append(BASE64_CHARS.charAt(index));
+            }
+        }
+
+        // Handle remaining bits
+        if (bitCount > 0) {
+            int index = (chunk << (6 - bitCount)) & 0x3F;
+            result.append(BASE64_CHARS.charAt(index));
+            paddingCount = (3 - (data.length % 3)) % 3;
+        }
+
+        // Add padding
+

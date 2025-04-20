@@ -16,4 +16,33 @@ This project, developed by second-year Computer Engineering students at FIEK, im
 ## Clone command:
 ```bash
 git clone https://github.com/enkelberisha1/Base64.git
-```
+## Project Description
+
+This Java program provides a hands-on implementation of Base64 encoding and decoding. It converts binary data (`byte[]`) to a Base64 encoded string and vice-versa, adhering to the standard of dividing bits into 6-bit blocks and adding `=` padding when necessary.
+
+
+The included JavaFX GUI empowers users to:
+
+* **Encode text to Base64:** Input text and see its Base64 representation.
+* **Decode text from Base64:** Paste a Base64 string and retrieve the original text.
+* **Compare results:** Instantly compare the output of the custom implementation with Java's standard Base64 encoder/decoder.
+* **Copy to clipboard:** Easily copy the encoded or decoded result with a single click.
+
+## Key Functionalities
+
+### `Base64Implementation.java`
+
+* **`customEncode(byte[] data)`**: Manually converts byte array data into a Base64 encoded string.
+* **`customDecode(String encoded)`**: Recovers the original byte data from a Base64 encoded string.
+
+**Implementation Details:**
+
+* Bit manipulation (`<<`, `>>`, `&`, `|`) for precise bit processing.
+* Robust input handling, including checks for `null` inputs.
+* Automatic padding with the `=` character as per the Base64 standard.
+* Efficient grouping of bits and conversion of 6-bit chunks into Base64 characters.
+
+### `Base64App.java`
+
+* Initializes and launches the JavaFX GUI application.
+* Loads the user interface defined in `Interface.fxml`.
