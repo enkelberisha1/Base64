@@ -46,3 +46,26 @@ The included JavaFX GUI empowers users to:
 
 * Initializes and launches the JavaFX GUI application.
 * Loads the user interface defined in `Interface.fxml`.
+* Manages the primary `Stage` and `Scene` for displaying the application window.
+
+### `InterfaceController.java`
+
+* Handles all GUI events triggered by user interactions (encoding, decoding, copying).
+* Orchestrates the comparison between the custom and Java's built-in Base64 implementations.
+* Provides informative explanations of the functionalities within the GUI.
+
+### `Interface.fxml`
+
+* Defines the structure and layout of the graphical user interface using TextAreas for input and output, and Buttons for actions.
+
+* Presents a clean and intuitive visual interface for ease of use.
+
+## How to Run the Program
+
+1.  **Open the project:** Import the project into your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse).
+2.  **Ensure dependencies:** Verify that you have Java Development Kit (JDK) 17 or higher installed and JavaFX configured correctly within your IDE.
+3.  **Run `Base64App.java`:** Execute the `main` method in the `Base64App.java` file. This will launch the graphical user interface.
+
+## Using the GUI
+
+Once the application is running, you will see the main window with the following options:
