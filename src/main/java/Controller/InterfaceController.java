@@ -1,3 +1,27 @@
+import Code.Base64Implementation;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
+
+public class InterfaceController {
+
+    @FXML
+    private TextArea inputText;
+
+    @FXML
+    private TextArea outputText;
+
+    @FXML
+    private TextArea authenticatorText;
+
+    @FXML
+    private TextArea functionText;
+
+    // Encrypt Button Handler
+    public void encryptText() {
+        String input = inputText.getText();
+
 "- Handles padding characters ('=')\n" +
         "- Validates input format");
         } catch (IllegalArgumentException e) {
