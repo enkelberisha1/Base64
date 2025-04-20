@@ -12,8 +12,9 @@ public class Base64App extends Application {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Interface.fxml"));
                 stage.setTitle("Base64 Encoder/Decoder");
                 stage.setScene(new Scene(fxmlLoader.load()));
-
-
-        }
-
+                stage.show();
+    }
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
